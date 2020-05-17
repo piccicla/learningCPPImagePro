@@ -1,11 +1,16 @@
 /*
- * copy bmp image
+ * read and copy bmp image
  * header format   http://www.fastgraph.com/help/bmp_header_format.html
  * */
  
 #include <stdio.h>  //for c version
 #include <stdlib.h>
 //#include <iostream>  //for c++ version
+
+
+#define BMP_HEADER_SIZE         54
+#define BMP_COLOR_TABLE_SIZE    1024
+#define CUSTOM_IMG_SIZE         1024*1024  //todo should be set with the input image
 
 /*
 int main(int argc, char **argv)
@@ -79,9 +84,6 @@ int main(int argc, char **argv)
 	return 0;
 }*/
 
-#define BMP_HEADER_SIZE         54
-#define BMP_COLOR_TABLE_SIZE    1024
-#define CUSTOM_IMG_SIZE         1024*1024  //todo should be set with the input image
 
 void  imageReader(const char *imgName,
                   int *_height,
